@@ -1,0 +1,132 @@
+.admin-dashboard {
+    padding: 30px;
+    max-width: 100%;
+    /* Full Width */
+    margin: 0 auto;
+}
+
+.admin-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .admin-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.admin-card {
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    /* Extruded panel */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-card h3 {
+    margin-top: 0;
+    border-bottom: 1px solid rgba(163, 177, 198, 0.3);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: var(--text-main);
+    font-weight: 700;
+    text-shadow: 1px 1px 1px white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 12px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow-inset);
+    /* Inset fields */
+    font-size: 1rem;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.form-group input:focus {
+    box-shadow: inset 4px 4px 6px rgba(163, 177, 198, 0.7), inset -4px -4px 6px rgba(255, 255, 255, 0.9);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-color);
+    color: #4CAF50;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    /* Extruded Green Button */
+    transition: all 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    box-shadow: var(--shadow-inset);
+    color: #388E3C;
+    transform: translateY(1px);
+}
+
+.admin-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    /* Small extruded list items */
+}
+
+.admin-list-item span {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.delete-btn {
+    background: var(--bg-color);
+    color: #ff5252;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    box-shadow: var(--shadow-inset);
+    color: #d32f2f;
+    transform: translateY(1px);
+}

@@ -1,0 +1,70 @@
+:root {
+  /* Neumorphic Palette */
+  --bg-color: #e0e5ec;
+  --text-main: #4a4a4a;
+  --text-light: #8e9aaf;
+  --accent-color: #667eea;
+
+  /* 3D Shadows */
+  --shadow-light: -9px -9px 16px rgba(255, 255, 255, 0.6);
+  --shadow-dark: 9px 9px 16px rgba(163, 177, 198, 0.6);
+  --shadow-inset: inset 6px 6px 10px 0 rgba(163, 177, 198, 0.7), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.8);
+
+  /* Concave/Convex */
+  --convex: linear-gradient(145deg, #ffffff, #e6e6e6);
+  --concave: linear-gradient(145deg, #e6e6e6, #ffffff);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.app {
+  max-width: 95%;
+  /* Take up most of the width */
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Global Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .tabs {
+    gap: 8px;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}

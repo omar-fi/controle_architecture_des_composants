@@ -1,0 +1,218 @@
+.parking-spots {
+  padding: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-left h2 {
+  color: var(--text-main);
+  text-shadow: 1px 1px 1px white;
+}
+
+.back-btn {
+  background: var(--bg-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+  color: var(--text-main);
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  color: var(--accent-color);
+}
+
+.refresh-btn {
+  background: var(--bg-color);
+  color: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+  transition: all 0.2s;
+}
+
+.refresh-btn:hover {
+  box-shadow: var(--shadow-inset);
+  transform: translateY(1px);
+}
+
+.legend {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+
+/* Specific dot colors */
+.dot[style*="background-color: #4CAF50"] {
+  background: #4CAF50 !important;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.spots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 25px;
+}
+
+.spot-card {
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: var(--shadow-inset);
+  /* Default: Inset means neutral or inactive */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+}
+
+/* Available - Extruded 3D Button */
+.spot-card.available {
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.spot-card.available h3 {
+  color: #4CAF50;
+  font-weight: 800;
+}
+
+.spot-card.available:hover {
+  transform: translateY(-3px);
+  /* Green glow on hover */
+  box-shadow: 5px 5px 10px rgba(76, 175, 80, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+.spot-card.available:active {
+  box-shadow: var(--shadow-inset);
+  transform: translateY(0);
+}
+
+/* Occupied - Deep Inset (Pressed) */
+.spot-card.occupee {
+  box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.6), inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+  background: #e6e6e6;
+}
+
+.spot-card.occupee::after {
+  content: "🚗";
+  font-size: 2.5rem;
+  position: absolute;
+  animation: parkCar 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes parkCar {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.spot-card.occupee h3 {
+  display: none;
+  /* Hide number if car is there, or move it */
+}
+
+.spot-card.occupee h3 {
+  color: #ef5350;
+}
+
+.spot-status {
+  display: none;
+  /* Removed the top bar for a cleaner interaction */
+}
+
+.spot-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+}
+
+.spot-card p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-badge {
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.spot-card.available .status-badge {
+  color: #4CAF50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.spot-card.occupee .status-badge {
+  color: #ef5350;
+  background: rgba(239, 83, 80, 0.1);
+}
+
+.no-data,
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-light);
+  background: var(--bg-color);
+  border-radius: 20px;
+  box-shadow: var(--shadow-inset);
+  margin: 20px;
+}
