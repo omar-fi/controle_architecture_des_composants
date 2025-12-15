@@ -1,0 +1,7 @@
+com/smartparking/parking/model/ParkingSpot.class
+com/smartparking/parking/ParkingServiceApplication.class
+com/smartparking/parking/repository/ParkingSpotRepository.class
+com/smartparking/parking/model/Parking.class
+com/smartparking/parking/repository/ParkingRepository.class
+com/smartparking/parking/model/ParkingSpot$StatutPlace.class
+com/smartparking/parking/config/CorsConfig.class

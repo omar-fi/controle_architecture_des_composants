@@ -1,0 +1,142 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.smartparking:reservation-service >----------------
+[INFO] Building Reservation Service 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.1.5:run (default-cli) > test-compile @ reservation-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ reservation-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ reservation-service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ reservation-service ---
+[INFO] skip non existing resourceDirectory /Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ reservation-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.1.5:run (default-cli) < test-compile @ reservation-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.1.5:run (default-cli) @ reservation-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2025-12-14T23:08:06.586+01:00  INFO 19404 --- [  restartedMain] c.s.r.ReservationServiceApplication      : Starting ReservationServiceApplication using Java 17.0.17 with PID 19404 (/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/target/classes started by omarfilali in /Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service)
+2025-12-14T23:08:06.587+01:00 DEBUG 19404 --- [  restartedMain] c.s.r.ReservationServiceApplication      : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-12-14T23:08:06.587+01:00  INFO 19404 --- [  restartedMain] c.s.r.ReservationServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-12-14T23:08:06.607+01:00  INFO 19404 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-14T23:08:06.607+01:00  INFO 19404 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-14T23:08:06.953+01:00  INFO 19404 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-14T23:08:07.042+01:00  INFO 19404 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interfaces.
+2025-12-14T23:08:07.158+01:00  INFO 19404 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=120674ec-371f-3ea9-82c3-6aeb885b99d7
+2025-12-14T23:08:07.183+01:00  INFO 19404 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.smartparking.reservation.client.ParkingServiceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-14T23:08:07.469+01:00  INFO 19404 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2025-12-14T23:08:07.475+01:00  INFO 19404 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-14T23:08:07.475+01:00  INFO 19404 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-12-14T23:08:07.507+01:00  INFO 19404 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-14T23:08:07.508+01:00  INFO 19404 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 901 ms
+2025-12-14T23:08:07.522+01:00  INFO 19404 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-14T23:08:07.623+01:00  INFO 19404 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:reservationdb user=SA
+2025-12-14T23:08:07.623+01:00  INFO 19404 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-14T23:08:07.628+01:00  INFO 19404 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:reservationdb'
+2025-12-14T23:08:07.696+01:00  INFO 19404 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-14T23:08:07.739+01:00  INFO 19404 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-12-14T23:08:07.741+01:00  INFO 19404 --- [  restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-12-14T23:08:07.889+01:00  INFO 19404 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-14T23:08:07.918+01:00  WARN 19404 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-14T23:08:08.300+01:00  INFO 19404 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table reservation (
+        id bigint generated by default as identity,
+        date_creation timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        email varchar(255),
+        nom_client varchar(255),
+        parking_spot_id bigint not null,
+        statut varchar(255) check (statut in ('ACTIVE','ANNULEE','TERMINEE')),
+        telephone varchar(255),
+        primary key (id)
+    )
+2025-12-14T23:08:08.326+01:00  INFO 19404 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-14T23:08:08.495+01:00  WARN 19404 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-14T23:08:08.510+01:00  WARN 19404 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-12-14T23:08:08.535+01:00  INFO 19404 --- [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'parking-service' URL not provided. Will try picking an instance via load-balancing.
+2025-12-14T23:08:08.727+01:00  INFO 19404 --- [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-12-14T23:08:08.744+01:00  WARN 19404 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-14T23:08:08.755+01:00  INFO 19404 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-14T23:08:08.803+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-14T23:08:08.805+01:00  INFO 19404 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-14T23:08:08.806+01:00 DEBUG 19404 --- [  restartedMain] c.n.discovery.endpoint.EndpointUtils     : The availability zone for the given region us-east-1 are [defaultZone]
+2025-12-14T23:08:08.806+01:00 DEBUG 19404 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8761/eureka/', region='us-east-1', zone='defaultZone'}]
+2025-12-14T23:08:08.806+01:00 DEBUG 19404 --- [  restartedMain] c.n.d.s.r.a.ZoneAffinityClusterResolver  : Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8761/eureka/', region='us-east-1', zone='defaultZone'}]
+2025-12-14T23:08:08.817+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-14T23:08:08.817+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-14T23:08:08.817+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-14T23:08:08.817+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-14T23:08:08.817+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-14T23:08:08.817+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-14T23:08:08.817+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-14T23:08:08.817+01:00 DEBUG 19404 --- [  restartedMain] c.n.d.s.t.d.SessionedEurekaHttpClient    : Ending a session and starting anew
+2025-12-14T23:08:08.986+01:00 DEBUG 19404 --- [  restartedMain] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Pinning to endpoint null
+2025-12-14T23:08:08.987+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-12-14T23:08:08.987+01:00 DEBUG 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Got full registry with apps hashcode UP_5_
+2025-12-14T23:08:08.987+01:00 DEBUG 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : The total number of all instances in the client now is 5
+2025-12-14T23:08:08.988+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-12-14T23:08:08.989+01:00  INFO 19404 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-12-14T23:08:08.991+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765750088991 with initial instances count: 5
+2025-12-14T23:08:08.992+01:00  INFO 19404 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RESERVATION-SERVICE with eureka with status UP
+2025-12-14T23:08:08.992+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765750088992, current=UP, previous=STARTING]
+2025-12-14T23:08:08.992+01:00 DEBUG 19404 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : Executing on-demand update of local InstanceInfo
+2025-12-14T23:08:08.992+01:00 DEBUG 19404 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : Canceling the latest scheduled update, it will be rescheduled at the end of on demand update
+2025-12-14T23:08:08.993+01:00  INFO 19404 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RESERVATION-SERVICE/mbp-de-omar:reservation-service:8082: registering service...
+2025-12-14T23:08:08.993+01:00 DEBUG 19404 --- [nfoReplicator-0] c.n.d.s.t.d.SessionedEurekaHttpClient    : Ending a session and starting anew
+2025-12-14T23:08:08.996+01:00  WARN 19404 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-12-14T23:08:08.997+01:00  INFO 19404 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-14T23:08:09.011+01:00 DEBUG 19404 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Pinning to endpoint null
+2025-12-14T23:08:09.011+01:00  INFO 19404 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RESERVATION-SERVICE/mbp-de-omar:reservation-service:8082 - registration status: 204
+2025-12-14T23:08:09.203+01:00  WARN 19404 --- [  restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2025-12-14T23:08:09.204+01:00  INFO 19404 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-14T23:08:09.206+01:00  INFO 19404 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-14T23:08:09.206+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-12-14T23:08:12.216+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-12-14T23:08:12.228+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RESERVATION-SERVICE/mbp-de-omar:reservation-service:8082 - deregister  status: 200
+2025-12-14T23:08:12.234+01:00  INFO 19404 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-12-14T23:08:12.236+01:00  INFO 19404 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-14T23:08:12.263+01:00  INFO 19404 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-14T23:08:12.282+01:00 ERROR 19404 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.335 s
+[INFO] Finished at: 2025-12-14T23:08:12+01:00
+[INFO] ------------------------------------------------------------------------

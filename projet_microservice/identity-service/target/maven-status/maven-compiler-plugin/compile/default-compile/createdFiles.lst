@@ -1,0 +1,10 @@
+com/smartparking/identity/config/AuthConfig.class
+com/smartparking/identity/config/CustomUserDetails.class
+com/smartparking/identity/controller/AuthController.class
+com/smartparking/identity/IdentityServiceApplication.class
+com/smartparking/identity/model/UserCredential.class
+com/smartparking/identity/repository/UserCredentialRepository.class
+com/smartparking/identity/dto/AuthRequest.class
+com/smartparking/identity/config/CustomUserDetailsService.class
+com/smartparking/identity/service/AuthService.class
+com/smartparking/identity/service/JwtService.class

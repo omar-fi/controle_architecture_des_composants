@@ -1,0 +1,8 @@
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/dto/ParkingSpotDTO.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/model/Reservation.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/config/CorsConfig.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/service/ReservationService.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/ReservationServiceApplication.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/controller/ReservationController.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/client/ParkingServiceClient.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/reservation-service/src/main/java/com/smartparking/reservation/repository/ReservationRepository.java

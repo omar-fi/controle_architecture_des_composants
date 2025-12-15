@@ -1,0 +1,143 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.smartparking:identity-service >------------------
+[INFO] Building identity-service 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.1.5:run (default-cli) > test-compile @ identity-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ identity-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ identity-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 10 source files with javac [debug release 17] to target/classes
+[WARNING] /Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/config/AuthConfig.java:[39,44] frameOptions() in org.springframework.security.config.annotation.web.configurers.HeadersConfigurer has been deprecated and marked for removal
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ identity-service ---
+[INFO] skip non existing resourceDirectory /Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ identity-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.1.5:run (default-cli) < test-compile @ identity-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.1.5:run (default-cli) @ identity-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2025-12-14T23:58:05.379+01:00  INFO 21950 --- [           main] c.s.identity.IdentityServiceApplication  : Starting IdentityServiceApplication using Java 17.0.17 with PID 21950 (/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/target/classes started by omarfilali in /Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service)
+2025-12-14T23:58:05.380+01:00  INFO 21950 --- [           main] c.s.identity.IdentityServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-14T23:58:05.784+01:00  INFO 21950 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-14T23:58:05.911+01:00  INFO 21950 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interfaces.
+2025-12-14T23:58:06.044+01:00  INFO 21950 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5fde6447-0cf2-33ee-a684-eed40a8aed1b
+2025-12-14T23:58:06.241+01:00  INFO 21950 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2025-12-14T23:58:06.247+01:00  INFO 21950 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-14T23:58:06.247+01:00  INFO 21950 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-12-14T23:58:06.308+01:00  INFO 21950 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-12-14T23:58:06.308+01:00  INFO 21950 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 906 ms
+2025-12-14T23:58:06.336+01:00  INFO 21950 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-14T23:58:06.444+01:00  INFO 21950 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:identitydb user=SA
+2025-12-14T23:58:06.444+01:00  INFO 21950 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-14T23:58:06.449+01:00  INFO 21950 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:identitydb'
+2025-12-14T23:58:06.514+01:00  INFO 21950 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-14T23:58:06.559+01:00  INFO 21950 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-12-14T23:58:06.562+01:00  INFO 21950 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-12-14T23:58:06.717+01:00  INFO 21950 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-14T23:58:06.747+01:00  WARN 21950 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-14T23:58:07.116+01:00  INFO 21950 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-14T23:58:07.144+01:00  INFO 21950 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-14T23:58:07.335+01:00  WARN 21950 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-14T23:58:07.414+01:00  INFO 21950 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c92a59d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4505015b, org.springframework.security.web.context.SecurityContextHolderFilter@477d6f66, org.springframework.security.web.header.HeaderWriterFilter@44723d95, org.springframework.web.filter.CorsFilter@49bc1f6c, org.springframework.security.web.authentication.logout.LogoutFilter@74d3b331, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5408fca1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ec1b776, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67167f8f, org.springframework.security.web.access.ExceptionTranslationFilter@20b921be, org.springframework.security.web.access.intercept.AuthorizationFilter@9c40f43]
+2025-12-14T23:58:07.596+01:00  INFO 21950 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-12-14T23:58:07.630+01:00  WARN 21950 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-14T23:58:07.640+01:00  INFO 21950 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-14T23:58:07.700+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-14T23:58:07.702+01:00  INFO 21950 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-14T23:58:07.714+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-14T23:58:07.714+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-14T23:58:07.714+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-14T23:58:07.714+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-14T23:58:07.714+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-14T23:58:07.714+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-14T23:58:07.714+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-14T23:58:07.922+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-12-14T23:58:07.923+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-12-14T23:58:07.924+01:00  INFO 21950 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-12-14T23:58:07.926+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765753087925 with initial instances count: 5
+2025-12-14T23:58:07.927+01:00  INFO 21950 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application IDENTITY-SERVICE with eureka with status UP
+2025-12-14T23:58:07.927+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765753087927, current=UP, previous=STARTING]
+2025-12-14T23:58:07.928+01:00  INFO 21950 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084: registering service...
+2025-12-14T23:58:07.932+01:00  WARN 21950 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-12-14T23:58:07.933+01:00  INFO 21950 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-14T23:58:07.935+01:00  INFO 21950 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-14T23:58:07.935+01:00  INFO 21950 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-14T23:58:07.935+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-12-14T23:58:07.972+01:00  INFO 21950 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - registration status: 204
+2025-12-14T23:58:07.973+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-12-14T23:58:07.977+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - deregister  status: 200
+2025-12-14T23:58:07.980+01:00  INFO 21950 --- [           main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-12-14T23:58:07.981+01:00  INFO 21950 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-14T23:58:07.990+01:00  INFO 21950 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-14T23:58:08.000+01:00 ERROR 21950 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8084 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8084 or configure this application to listen on another port.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.447 s
+[INFO] Finished at: 2025-12-14T23:58:08+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.1.5:run (default-cli) on project identity-service: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+                                                                                                                                                                                                                                                                                                                                                                                                                               2025-12-14T23:58:11.119+01:00  INFO 17615 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - Re-registering apps/IDENTITY-SERVICE
+2025-12-14T23:58:11.121+01:00  INFO 17615 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084: registering service...
+2025-12-14T23:58:11.145+01:00  INFO 17615 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - registration status: 204
+2025-12-14T23:58:38.354+01:00  INFO 17615 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-15T00:03:38.362+01:00  INFO 17615 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-15T00:08:38.368+01:00  INFO 17615 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-15T00:09:41.921+01:00  INFO 17615 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - Re-registering apps/IDENTITY-SERVICE
+2025-12-15T00:09:41.926+01:00  INFO 17615 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084: registering service...
+2025-12-15T00:09:41.941+01:00  INFO 17615 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - registration status: 204
+2025-12-15T00:13:38.411+01:00  INFO 17615 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-15T00:18:38.422+01:00  INFO 17615 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-15T00:23:38.428+01:00  INFO 17615 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-15T00:24:19.691+01:00  INFO 17615 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application IDENTITY-SERVICE with eureka with status DOWN
+2025-12-15T00:24:19.694+01:00  INFO 17615 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765754659694, current=DOWN, previous=UP]
+2025-12-15T00:24:19.695+01:00  INFO 17615 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084: registering service...
+2025-12-15T00:24:19.710+01:00  INFO 17615 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - registration status: 204
+2025-12-15T00:24:19.787+01:00  INFO 17615 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T00:24:19.798+01:00  INFO 17615 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-15T00:24:19.801+01:00  INFO 17615 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-15T00:24:19.802+01:00  INFO 17615 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-12-15T00:24:22.815+01:00  INFO 17615 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-12-15T00:24:22.828+01:00  INFO 17615 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IDENTITY-SERVICE/mbp-de-omar:identity-service:8084 - deregister  status: 200
+2025-12-15T00:24:22.838+01:00  INFO 17615 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

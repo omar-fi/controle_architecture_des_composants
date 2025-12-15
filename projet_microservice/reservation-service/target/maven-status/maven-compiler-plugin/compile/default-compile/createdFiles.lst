@@ -1,0 +1,10 @@
+com/smartparking/reservation/service/ReservationService.class
+com/smartparking/reservation/ReservationServiceApplication.class
+com/smartparking/reservation/repository/ReservationRepository.class
+com/smartparking/reservation/model/Reservation.class
+com/smartparking/reservation/dto/ParkingSpotDTO.class
+com/smartparking/reservation/client/ParkingServiceClient.class
+com/smartparking/reservation/config/CorsConfig.class
+com/smartparking/reservation/dto/ParkingSpotDTO$StatutPlace.class
+com/smartparking/reservation/model/Reservation$StatutReservation.class
+com/smartparking/reservation/controller/ReservationController.class

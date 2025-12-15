@@ -1,0 +1,10 @@
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/config/CustomUserDetailsService.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/IdentityServiceApplication.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/config/CustomUserDetails.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/dto/AuthRequest.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/controller/AuthController.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/model/UserCredential.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/service/AuthService.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/config/AuthConfig.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/repository/UserCredentialRepository.java
+/Users/omarfilali/Desktop/projet_architecture/projet_microservice/identity-service/src/main/java/com/smartparking/identity/service/JwtService.java
