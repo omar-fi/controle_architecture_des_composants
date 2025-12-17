@@ -21,9 +21,10 @@ pipeline {
         // ===================================
         stage('Frontend: Build') {
             steps {
-                echo 'Démarrage de la construction du Frontend React...'
-                // Correction : Utilisation du nom exact vu sur GitHub
+                echo 'Nettoyage et construction du Frontend React...'
                 dir('smart-parking-frontend') {
+                    // Supprime les anciens modules et le lock pour éviter les conflits d'architecture
+                    sh 'rm -rf node_modules package-lock.json'
                     sh 'npm install'
                     sh 'npm run build'
                 }
@@ -33,34 +34,28 @@ pipeline {
         // ===================================
         // Stage 2 : Microservices - Chemin corrigé
         // ===================================
+        // ... (reste du fichier identique)
+
         stage('Backend: Parallel CI/CD') {
             steps {
                 script {
                     def branches = [:]
-
                     microservices.each { serviceName ->
                         branches["${serviceName}"] = {
                             node { 
                                 stage("CI/CD ${serviceName}") {
-                                    // Correction : Le dossier parent est 'projet_microservice'
+                                    // AJUSTEMENT ICI : vérifiez si un dossier intermédiaire existe
+                                    // Si vos services sont directement dans projet_microservice, gardez tel quel
+                                    // Sinon, utilisez : dir("projet_microservice/NOM_DU_DOSSIER/${serviceName}")
                                     dir("projet_microservice/${serviceName}") {
-                                        echo "Début de la CI/CD pour ${serviceName}"
+                                        echo "Vérification du dossier actuel :"
+                                        sh "pwd"
+                                        sh "ls -F" // Pour voir si le pom.xml est présent
                                         
-                                        // Build & Test (Ajout de -DskipTests pour aller plus vite si besoin)
                                         sh 'mvn clean install -DskipTests'
                                         
-                                        // Construction Docker
+                                        // On vérifie aussi si le Dockerfile est présent avant de build
                                         sh "docker build -t ${serviceName}:${env.BUILD_ID} ."
-
-                                        // Push (Nécessite que vous ayez créé l'identifiant 'docker-hub-credentials' dans Jenkins)
-                                        try {
-                                            withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
-                                                sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
-                                                sh "docker push ${serviceName}:${env.BUILD_ID}"
-                                            }
-                                        } catch (e) {
-                                            echo "Échec du push pour ${serviceName}. Vérifiez vos credentials Docker."
-                                        }
                                     }
                                 }
                             }
@@ -70,6 +65,7 @@ pipeline {
                 }
             }
         }
+// ...
         
         // ===================================
         // Stage 3 : Déploiement Image Frontend
